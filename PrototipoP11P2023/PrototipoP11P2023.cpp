@@ -60,7 +60,7 @@ int main() {
             for (int k = 0; k < NUM_ANIOS; k++) {
                 equipo.puntuaciones[k] = generar_puntuacion();
             }
-            equipo.max_puntuacion = * max(equipo.puntuaciones, equipo.puntuaciones + NUM_ANIOS);
+            equipo.max_puntuacion = *max_element(equipo.puntuaciones, equipo.puntuaciones + NUM_ANIOS);
             equipo.min_puntuacion = *min_element(equipo.puntuaciones, equipo.puntuaciones + NUM_ANIOS);
             equipo.promedio = calcular_promedio(equipo.puntuaciones, NUM_ANIOS);
         }
